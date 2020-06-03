@@ -1,19 +1,36 @@
 <div class="body">
-<div class="head">AJOUT NOUVELLE CLASSE
+  <div class="img">
+
+  </div>
+  <div class="form">
+<div class="head">
+  <span class="titre">AJOUT NOUVELLE CLASSE</span>
 </div>
   <div class="formulaire">
     <form>
       <div class="libelle">
-        <span class="text">Libelle</span>
-        <input type="text" class="i-libelle" [(ngModel])="libelle">
+        <div class="text">
+          Libelle
+        </div>
+        <div class="i-libelle">
+        <input type="text" (ngModel)="libelle">
+        </div>
       </div>
       <div class="filiere">
-        <span class="text">Filiere</span>
-        <input type="text" class="i-filiere" [(ngModel])="filiere">
+        <div class="text">
+          Filiere
+        </div>
+        <div class="i-filiere">
+        <input type="text"  (ngModel)="filiere">
+        </div>
       </div>
       <div class="niveau">
-        <span class="text">Niveau</span>
-        <input type="text" class="i-niveau" [(ngModel])="niveau">
+        <div class="text">
+          Niveau
+        </div>
+        <div class="i-niveau">
+        <input type="text"  (ngModel)="niveau">
+        </div>
       </div>
       <div class="bouton">
         <button class="btn-annuler" (click)="Annuler()">Annuler</button>
@@ -21,6 +38,7 @@
       </div>
 
     </form>
+  </div>
   </div>
 </div>
 

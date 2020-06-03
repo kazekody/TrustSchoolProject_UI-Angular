@@ -1,0 +1,63 @@
+.body{
+  width: 70%;
+  height: 100%;
+  margin-left: 15%;
+  display: flex;
+  border-radius: 15px 15px 0 0;
+}
+.img{
+  width: 50%;
+  background-image: url("../new-classe/New Phototastic Collage.jpg");
+  background-size: cover;
+}
+.form{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.head{
+  height: 25%;
+  background-color: white;
+  display: flex;
+}
+.titre{
+  color: chocolate;
+  font-size: 26px;
+  font-weight: bold;
+  font-family: Calibri;
+  margin: auto;
+}
+.formulaire{
+  height: 75%;
+  background-color: white;
+  //border-radius: 0 0 5px 5px;
+  display: flex;
+}
+form{
+  margin: auto;
+}
+.libelle,.filiere,.niveau,.bouton{
+  margin-bottom: 50px;
+  display: flex;
+}
+.text{
+  font-family: Calibri;
+  height: 20px;
+  width: 60px;
+  font-size: 20px;
+  color: #555;
+  font-weight: 700;
+  margin-right: 60px;
+  margin-top: 15px;
+}
+input{
+  //margin: auto;
+  background: #e5e5e5;
+  line-height: 50px;
+  border-radius: 5px;
+  border: none;
+  padding: 0 22px;
+  font-size: 16px;
+  color: #555
+}
