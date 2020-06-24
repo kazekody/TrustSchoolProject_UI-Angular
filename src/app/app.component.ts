@@ -10,9 +10,17 @@ import {Variables} from './Variables';
 export class AppComponent implements OnInit {
   title = 'TrustSchoolProject';
   selected = true;
+  link = [];
   constructor(private router: Router, private Variable: Variables) { }
 
   ngOnInit() {
-    this.selected = this.Variable.selected;
+  }
+  newClasse() {
+    this.selected = false;
+    this.link = ['NewClasse'];
+    this.router.navigate(this.link);
+  }
+  newEleve() {
+
   }
 }
