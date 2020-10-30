@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpErrorResponse} from '@angular/common/http';
 import {Variables} from '../Variables';
 
 @Component({
@@ -9,12 +9,10 @@ import {Variables} from '../Variables';
   styleUrls: ['./new-classe.component.scss']
 })
 export class NewClasseComponent implements OnInit {
-  libelle: string;
-  filiere: string;
-  niveau: string;
+
   response: any;
   link = [];
-  url = 'http://localhost:8080/InscriptionClasse/enregistrement/';
+  public url = 'http://localhost:8080/InscriptionClasse/enregistrement/';
 
   constructor(private router: Router, private http: HttpClient, private variable: Variables) {
   }
@@ -22,12 +20,9 @@ export class NewClasseComponent implements OnInit {
   ngOnInit() {
   }
 
-  Annuler() {
-
-  }
-
-  Valider() {
-    this.http.post(this.url + this.libelle + '/' + this.filiere + '/' + this.niveau, this.filiere).subscribe(
+  Valider(newClasse) {
+    console.log(newClasse);
+    this.http.post(this.url + newClasse.libelle + '/' + newClasse.filiere + '/' + newClasse.niveau, newClasse.libelle).subscribe(
       (response) => {
         this.response = response;
         if (this.response.returnMsg === 'success') {
@@ -40,7 +35,7 @@ export class NewClasseComponent implements OnInit {
 
       },
       (error) => {
-        console.log('Erreur', error);
+        console.log('Erreur', error, HttpErrorResponse);
       },
       () => {
         console.log('Enregistrement reussi et termine !');

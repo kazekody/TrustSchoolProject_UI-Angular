@@ -1,8 +1,8 @@
 .body{
-  width: 70%;
-  height: 80%;
-  margin-left: 15%;
-  margin-top: 5%;
+  width: 80%;
+  height: 90%;
+  margin-left: 10%;
+  margin-top: 2%;
   display: flex;
 }
 .img{
@@ -33,13 +33,13 @@
   margin: auto;
 }
 form{
-  height: 45%;
+  height: 65%;
   background-color: white;
   display: flex;
   border-radius: 0 0 5px 0;
 }
 .labels{
-  width: 35%;
+  width: 40%;
   //margin-bottom: 10px;
   margin-left: 30px;
   display: flex;
@@ -51,16 +51,26 @@ form{
 }
 .textLabel{
   position: relative;
-  top: 10px;
+  top: 15px;
 }
 label{
-  width: 140px;
+  width: 170px;
   height: 42px;
   font-size: 16px;
   color: #555;
   font-weight: bold;
   font-family: Calibri;
   margin-bottom: 10px;
+}
+select{
+  background: #e6d1ae;
+  height: 40px;
+  width: 124%;
+  border-radius: 25px;
+  border: none;
+  padding: 0 12px;
+  font-size: 14px;
+  color: #555
 }
 ::placeholder{
   color:#c9b48f;
@@ -97,9 +107,6 @@ textarea{
   padding: 0 12px;
   font-size: 14px;
   color: #555;
-}
-input:required {
- // border: 1px solid rgb(255, 21, 21,0.5);
 }
 input:focus, select:focus,textarea{
   outline: none;
@@ -155,3 +162,4 @@ button {
   background-color:#4bbd4b ;
   border : 1px #4bbd4b solid;
 }
+

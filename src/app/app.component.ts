@@ -1,3 +1,4 @@
+import { identifierModuleUrl } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 import {Variables} from './Variables';
@@ -17,10 +18,12 @@ export class AppComponent implements OnInit {
   }
   newClasse() {
     this.selected = false;
-    this.link = ['NewClasse'];
+    this.link = ['/NewClasse'];
     this.router.navigate(this.link);
   }
   newEleve() {
-
+    this.selected = false;
+    this.link = ['/NewEleve/1'];
+    this.router.navigate(this.link);
   }
 }

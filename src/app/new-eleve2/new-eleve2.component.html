@@ -1,0 +1,89 @@
+<div class="body">
+  <div class="img">
+  </div>
+  <div class="formulaire">
+<div class="head">
+  <span class="titre">AJOUT NOUVELLE ELEVE</span>
+</div>
+    <form #newEleveForm="ngForm">
+            <div class="labels">
+            <label>
+              <span class="textLabel">Nom du Père</span>
+            </label>
+            <label>
+              <span class="textLabel">Nom de la mère</span>
+            </label>
+            <label>
+              <span class="textLabel">Profession du père</span>
+            </label>
+            <label>
+              <span class="textLabel">Profession de la mère</span>
+            </label>
+            <label>
+              <span class="textLabel">Tel père</span>
+            </label>
+            <label>
+              <span class="textLabel">Tel mère</span>
+            </label>
+
+            <label>
+              <span class="textLabel">Choisir la classe de l'élève</span>
+            </label>
+          </div>
+
+          <div class="inputs">
+
+              <input type="text"
+              ngModel
+              required
+              placeholder="Nom du père"
+              name="nomPere">
+
+                <input type="text"
+                ngModel
+                required
+                placeholder="Nom de la mère"
+                name="nomMere">
+
+              <input type="text"
+                required
+                ngModel
+                placeholder="Profession père"
+                name="profPere">
+
+              <input type="text"
+                required
+                ngModel
+                placeholder="Profession mère"
+                name="profMere">
+
+              <input type="tel"
+                required
+                ngModel
+                placeholder="Télephone père"
+                name="telPere">
+
+                <input type="tel"
+                required
+                ngModel
+                placeholder="Télephone mère"
+                name="telMere">
+
+                <select #filiere name="classe" ngModel placeholder="Classe">
+                  <option *ngFor="let libelle of listeClasseLibelle" name= "classe" value="{{libelle}}">{{libelle}}</option>
+                </select>
+              </div>
+
+
+        </form>
+
+        <div class="bouton">
+        <button class="btn-valider" (click)="Valider(newEleveForm.value)">
+         Suivant
+         <svg aria-hidden="true" width ="14" height="14" focusable="false" data-prefix="fas" data-icon="arrow-right" class="svg-inline--fa fa-arrow-right fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"></path></svg>
+        </button>
+        </div>
+  </div>
+  </div>
+
+

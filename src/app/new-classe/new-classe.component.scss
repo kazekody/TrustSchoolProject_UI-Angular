@@ -1,7 +1,8 @@
 .body{
-  width: 90%;
-  height: 100%;
-  margin-left: 5%;
+  width: 60%;
+  height: 80%;
+  margin-top: 5%;
+  margin-left: 20%;
   display: flex;
 }
 .img{
@@ -10,7 +11,7 @@
   background-size: cover;
   border-radius: 5px 0 0 5px;
 }
-.form{
+.formulaire{
   width: 50%;
   height: 100%;
   display: flex;
@@ -25,86 +26,86 @@
 }
 .titre{
   color: #8fbad7;
-  font-size: 26px;
+  font-size: 20px;
   font-weight: bold;
   font-family: Calibri;
   margin: auto;
 }
-.formulaire{
+form{
   height: 100%;
   background-color: white;
-  //border-radius: 0 0 5px 5px;
-  display: flex;
   border-radius: 0 0 5px 0;
 }
-form{
-  margin: auto;
+::placeholder{
+  color:hsl(206, 56%, 91%);
+  font-size: 14px;
 }
-.libelle,.filiere,.niveau,.bouton{
-  margin-bottom: 50px;
+.libelle,.filiere,.niveau{
+  margin-bottom: 30px;
+  margin-left: 10%;
   display: flex;
 }
-.text{
-  font-family: Calibri;
-  height: 18px;
-  width: 60px;
-  font-size: 20px;
+label{
+  font-size: 16px;
   color: #555;
-  font-weight: 700;
-  margin-right: 60px;
+  font-weight: bold;
+  margin-right: 40px;
   margin-top: 15px;
+  font-family: Calibri;
 }
 input{
   //margin: auto;
   background: hsl(205, 44%, 77%);
-  width: 150px;
+  width: 80%;
   line-height: 40px;
-  border-radius: 5px;
+  border-radius: 25px;
   border: none;
-  padding: 0 22px;
-  font-size: 16px;
+  padding: 0 12px;
+  font-size: 14px;
   color: #555
+}
+select{
+  background: hsl(205, 44%, 77%);
+  height: 40px;
+  width: 124%;
+  border-radius: 25px;
+  border: none;
+  padding: 0 12px;
+  font-size: 14px;
+  color: #555
+}
+select:checked{
+  background: #01ad01;
+}
+input:focus, select:focus{
+  outline: none;
+  border: none;
+
 }
 .bouton{
   display: flex;
-}
-.bouton1{
   width: 40%;
-}
-.bouton2{
-  width: 40%;
-  margin-left: 20%;
+  margin-top: 70px;
+  margin-left: 30%;
 }
 svg{
   margin: auto;
   margin-left: 15px;
 }
-.btn-annuler{
-  width: 100%;
-  height: 35px;
-  border-radius: 20px;
-  border: 1px #ff1d1d solid;
-  background-color: #ff1d1d;
-  color: white;
-  font-family: Calibri;
-  font-size: 16px;
-  font-weight: bold;
-  margin-left: 0;
-}
 .btn-valider{
-  width: 100%;
-  height: 35px;
-  border-radius: 20px;
+  width: 80%;
+  height: 32px;
+  margin-bottom: 0px;
   border: 1px #01ad01 solid;
+  border-radius: 20px;
   background-color: #01ad01;
   color: whitesmoke;
   font-family: Calibri;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
-  margin-right: 0;
+  margin-left: 10%;
 }
 $colors: (
-  btn-annuler: #ff1d1d,
   btn-valider: #01ad01
 );
 @each $button, $color in $colors {
@@ -123,11 +124,14 @@ button {
     color: whitesmoke;
   }
 }
-.btn-annuler:hover,
-.btn-annuler:focus,
-.btn-valider:hover,
-.btn-valider:focus{
+.btn-valider:hover
+{
   box-shadow: 0em 1em 1em -0.4em var(--hover);
   transform: translateY(-0.25em);
+}
+.btn-valider:focus{
+  outline: none;
+  background-color:#4bbd4b ;
+  border : 1px #4bbd4b solid;
 }
 
